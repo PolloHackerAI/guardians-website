@@ -115,7 +115,7 @@ export default function TeamPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 md:h-96">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/foto_insieme.png?height=400&width=600"
                 alt="Cultura aziendale GUARDIANS"
                 fill
                 className="object-cover rounded-lg"

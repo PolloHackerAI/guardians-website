@@ -119,7 +119,7 @@ export default function Home() {
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="relative h-64 mb-6">
                 <Image
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/bracciale_base.png?height=300&width=300"
                   alt="Guardian Classic Bracelet"
                   fill
                   className="object-contain"

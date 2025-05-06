@@ -37,7 +37,7 @@ export default function ProductsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 <div className="relative h-80 md:h-96">
                   <Image
-                    src="/placeholder.svg?height=400&width=400"
+                    src="/bracciale_base.png?height=400&width=400"
                     alt="Guardian Classic Bracelet"
                     fill
                     className="object-contain"
