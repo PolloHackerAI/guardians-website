@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -34,22 +34,22 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#products" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/prodotti" className="text-gray-400 hover:text-white transition-colors">
                   Prodotti
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/chi-siamo" className="text-gray-400 hover:text-white transition-colors">
                   Chi Siamo
                 </Link>
               </li>
               <li>
-                <Link href="#team" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/team" className="text-gray-400 hover:text-white transition-colors">
                   Team
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/contatti" className="text-gray-400 hover:text-white transition-colors">
                   Contatti
                 </Link>
               </li>
@@ -60,22 +60,22 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Prodotti</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/prodotti" className="text-gray-400 hover:text-white transition-colors">
                   Guardian Classic
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/prodotti" className="text-gray-400 hover:text-white transition-colors">
                   Guardian Pro
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/prodotti" className="text-gray-400 hover:text-white transition-colors">
                   Accessori
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/prodotti" className="text-gray-400 hover:text-white transition-colors">
                   App Mobile
                 </Link>
               </li>
@@ -87,7 +87,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-gray-400 mr-2 mt-0.5" />
-                <span className="text-gray-400">Via Roma 123, 00100 Roma, Italia</span>
+                <span className="text-gray-400">Viale Adua, 87, 51100 Pistoia (PT), Italia</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-gray-400 mr-2" />
@@ -95,7 +95,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-gray-400 mr-2" />
-                <span className="text-gray-400">info@guardians.it</span>
+                <span className="text-gray-400">assistenzaguardians@gmail.com</span>
               </li>
             </ul>
           </div>

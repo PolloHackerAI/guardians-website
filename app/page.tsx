@@ -1,8 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronRight, Shield, Users, Target } from "lucide-react"
-import TeamSection from "@/components/team-section"
-import ProductShowcase from "@/components/product-showcase"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -19,9 +18,11 @@ export default function Home() {
               avanzata.
             </p>
             <div className="pt-4">
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-100">
-                Scopri i nostri prodotti <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href="/prodotti">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-100">
+                  Scopri i nostri prodotti <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
@@ -107,10 +108,90 @@ export default function Home() {
       </section>
 
       {/* Product Showcase */}
-      <ProductShowcase />
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">I Nostri Prodotti</h2>
+          <p className="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+            Bracciali intelligenti che combinano eleganza e sicurezza personale
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="relative h-64 mb-6">
+                <Image
+                  src="/placeholder.svg?height=300&width=300"
+                  alt="Guardian Classic Bracelet"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-2">Guardian Classic</h3>
+              <p className="text-gray-700 mb-4">
+                Il nostro modello base, elegante e discreto. Dotato di pulsante SOS nascosto che invia avvisi di
+                emergenza ai contatti preimpostati.
+              </p>
+              <Link href="/prodotti">
+                <Button className="bg-blue-900 hover:bg-blue-800 w-full">Scopri di più</Button>
+              </Link>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="relative h-64 mb-6">
+                <Image
+                  src="/placeholder.svg?height=300&width=300"
+                  alt="Guardian Pro Bracelet"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-purple-900 mb-2">Guardian Pro</h3>
+              <p className="text-gray-700 mb-4">
+                Il nostro modello premium con funzionalità avanzate. Include registrazione audio, monitoraggio della
+                frequenza cardiaca e connettività cellulare.
+              </p>
+              <Link href="/prodotti">
+                <Button className="bg-purple-900 hover:bg-purple-800 w-full">Scopri di più</Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Team Section */}
-      <TeamSection />
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Il Nostro Team</h2>
+          <p className="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+            Professionisti appassionati che lavorano insieme per rivoluzionare la sicurezza personale
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[
+              "Merisi Martina",
+              "Giulio Grossi",
+              "Sara Meco",
+              "Francesco Caratù",
+              "Michael Tranchino",
+              "Dario Battistini",
+            ].map((name, index) => (
+              <div key={index} className="text-center">
+                <div className="relative h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
+                  <Image src={`/placeholder.svg?height=128&width=128`} alt={name} fill className="object-cover" />
+                </div>
+                <h3 className="font-semibold">{name}</h3>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/team">
+              <Button variant="outline" className="border-blue-900 text-blue-900 hover:bg-blue-50">
+                Conosci il Team
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
@@ -119,9 +200,11 @@ export default function Home() {
           <p className="text-xl max-w-2xl mx-auto mb-8">
             Scopri la collezione GUARDIANS e trasforma il modo in cui vivi la sicurezza personale.
           </p>
-          <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-100">
-            Contattaci Ora
-          </Button>
+          <Link href="/contatti">
+            <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-100">
+              Contattaci Ora
+            </Button>
+          </Link>
         </div>
       </section>
     </main>
